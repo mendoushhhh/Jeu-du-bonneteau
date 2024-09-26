@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu du Bonneteau</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+         
+                    <h1 id="titre">Bonneteau</h1>
+                    <h3 id="paragraphe">"les cartes noires perdent et la carte rouge gagne"</h3>
+                    
+                    <!-- toutes les cartes -->
+            <!-- div cards avec s car ele contient toutes les cartes -->
+
+                        <div class="cards" >
+                                            <!-- on met le onclick la pca ya deu carte et pas une seul tu vois ça concerne deux cartes -->
+                                            <div class="card" onclick="flip(event)">
+                                            
+                                                    <div class="back"></div> 
+                                                    <div class="front">
+                                                        <!-- il a rjout cette classe , cette image il l'a encore superposé avant jsp pq -->
+                                                        <img class="card-img" src="./images/recto.png" alt="black-card" width="200px" >
+                                                    </div>
+                                                
+                                            </div>
+                                            <div class="card" onclick="flip(event)">
+                                            
+                                                <div class="back"></div> 
+                                                <div class="front">
+                                                    <!-- il a rjout cette classe , cette image il l'a encore superposé avant jsp pq -->
+                                                    <img class="card-img" src="./images/recto.png" alt="black-card" width="200px" >
+                                                </div>
+                                                    
+                                            </div>
+                                            <div class="card" onclick="flip(event)">
+                                            
+                                                    <div class="back"></div> 
+                                                    <div class="front">
+                                                        <!-- il a rjout cette classe , cette image il l'a encore superposé avant jsp pq -->
+                                                        <img class="card-img" src="./images/recto.png" alt="black-card" width="200px" >
+                                                    </div>
+                                                        
+                                            </div>
+
+
+                        </div>
+<!-- btn va nous eprmettre de le récuperer sur js -->
+                        <button id="btn">Générer</button>
+                                       
+                                        
+                                
+
+          
+                
+
+
+    </div>
+
+
+  
+  
+
+
+
+
+    
+
+<!-- script javascript -->
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+body {
+    background: #483d8b;
+    color: whitesmoke;
+    margin: 10px;
+}
+img {
+    height: 200px;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#titre {
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+#paragraphe {
+    font-size: 1.5rem;
+}
+/* ***************((((((1)))))))enfait au début juste tu superpose l'image 'lune sur l'autre  *************** */
+/*1) ça c'est juste pour mettre bien en place les cartes , préparé le terrain*/
+/* ici dans le cards c'est just pour aligner , y rien de vrmt technique  */
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height:100%;
+}
+/* 2)ça devient plus technique  mais avant on ajoute les iamges et ont met les tailles des cartes a meme heateur et largeur voir .front et .back :on va définir sur la propiété front et back , je vais mettre position absolute,  */
+.front, .back {
+    position: absolute;
+    backface-visibility: hidden;
+    background-size: 200px;
+    height: 290px;
+    width: 200px;
+    /* permet d'avoir un truc un peu plus correct lorss du rechargement de la page , plus fluide */
+
+}
+
+div.card{
+    width: 200px;
+    height: 300px;
+    margin: 10px;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+
+
+}
+/* 3)enlevr img sur html et le mettre ici quoi */
+
+.front {
+    background: url(./images/recto.png) ;
+    background-size: 200px;
+    /* il faut également lui donner une width sinon on voit rien , rien n'apaprait */
+    width: 200px;
+  /* assez important le background size sinon on ne voit que le 10 sur la carte */
+   transform: rotateY(180deg);
+  
+}
+.card-img {
+    height: 290px;
+}
+
+.back{
+    background: url(./images/versos.png) ;
+    background-size: 200px;
+    /* assez important le background size sinon on ne voit que le 10 sur la carte */
+    width: 200px; 
+    /* idem ici */
+    
+    
+    
+}
+
+div {
+    width: 100%;
+    height: 100%;
+}
+.flex {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 40%;
+}
+
+/* *********(((((2))))))) mtn on fait l'animation la a savoir quand on lcique sur l'image alors il y a l'effet qui se créer ********** */
+
+
+/* *******((((((3)))))))) mtn on va définir les 3 cartes par défaut , il fuaut qu'on mélange aléatoirement les cartes au chargement de la page voir la fucntion suffle */
+
+#btn {
+    font-size: 30px;
+    height: 40px;
+    background: blue;
+    color: whitesmoke;
+}
